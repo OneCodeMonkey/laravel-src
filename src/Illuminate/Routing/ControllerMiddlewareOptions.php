@@ -29,7 +29,7 @@ class ControllerMiddlewareOptions
      */
     public function only($methods)
     {
-        $this->options['only'] = is_array($method) ? $method : func_get_args();
+        $this->options['only'] = is_array($methods) ? $methods : func_get_args();
 
         return $this;
     }
