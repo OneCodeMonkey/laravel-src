@@ -92,28 +92,6 @@
     "squizlabs/php_codesniffer": "3.*",
     "phpstan/phpstan": "~0.12"
   },
-  "autoload": {
-    "files": [
-      "src/Illuminate/Foundation/helpers.php",
-      "src/Illuminate/Support/helpers.php"
-    ],
-    "psr-4": {
-      "Illuminate\\": "src/Illuminate/"
-    }
-  },
-  "autoload-dev": {
-    "files": [
-      "tests/Database/stubs/MigrationCreatorFakeMigration.php"
-    ],
-    "psr-4": {
-      "Illuminate\\Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "6.x-dev"
-    }
-  },
   "suggest": {
     "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
     "ext-memcached": "Required to use the memcache cache driver.",
