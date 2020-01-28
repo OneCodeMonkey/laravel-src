@@ -16,8 +16,8 @@ abstract class Controller
     /**
      * Register middleware on the controller.
      *
-     * @param  \Closure|array|string  $middleware
-     * @param  array  $options
+     * @param  \Closure|array|string $middleware
+     * @param  array $options
      * @return \Illuminate\Routing\ControllerMiddlewareOptions
      */
     public function middleware($middleware, array $options = [])
@@ -45,7 +45,7 @@ abstract class Controller
     /**
      * Execute an action on the controller.
      *
-     * @param  string  $method
+     * @param  string $method
      * @param  array  $parameters
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -57,7 +57,7 @@ abstract class Controller
     /**
      * Handle calls to missing methods on the controller.
      *
-     * @param  string  $method
+     * @param  string $method
      * @param  array  $parameters
      * @return mixed
      * @throws \BadMethodCallException
