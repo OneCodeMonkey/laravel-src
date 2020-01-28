@@ -38,10 +38,12 @@ class ControllerDispatcher implements ControllerDispatcherContract
     public function dispatch(Route $route, $controller, $method)
     {
         $parameters = $this->resolveClassMethodDependencies(
-            $route->parametersWithoutNulls(), $controller, $method
+            $route->parametersWithoutNulls(),
+            $controller,
+            $method
         );
 
-        if(method_exists($controller, 'callAction')) {
+        if (method_exists($controller, 'callAction')) {
             return $controller->callAction($method, $parameters);
         };
 
@@ -75,6 +77,7 @@ class ControllerDispatcher implements ControllerDispatcherContract
      */
     protected static function methodExcludedByOptions($method, array $options)
     {
-        return (isset($options['only']) && ! in_array($method, (array) $options['only'])) || (! empty($options['except']) && in_array($method, (array) $options['except']));
+        return (isset($options['only']) && ! in_array($method, (array) $options['only'])) ||
+            (! empty($options['except']) && in_array($method, (array) $options['except']));
     }
 }
