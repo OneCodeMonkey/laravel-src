@@ -38,6 +38,6 @@ install:
   - if [[ $SETUP='lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable --no-suggest; fi
 
 script:
-  - phpcs --standard=PSR-2 -v src/ tests/
-  - phpstan analyse --level 1 src/ tests/
-  - phpunit tests/
+  - vendor/bin/phpcs --standard=PSR-2 -v src/ tests/
+  - vendor/bin/phpstan analyse --level 1 src/ tests/
+  - vendor/bin/phpunit tests/
