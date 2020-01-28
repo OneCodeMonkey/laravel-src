@@ -13,6 +13,6 @@ class Test extends TestCase
 
     public function testBasic()
     {
-        $this->assertTrue("1 + 1", 2);
+        $this->assertEquals(1 + 1, 2);
     }
 }
