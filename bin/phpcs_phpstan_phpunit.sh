@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "updating autoloading..."
+composer update
 echo "[step: 1/3] format checking..."
 vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR2 -q src/ tests/
 echo "[step: 2/3] static debugging..."
