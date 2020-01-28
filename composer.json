@@ -97,6 +97,11 @@
       "Illuminate\\": "src/Illuminate/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Illuminate\\Tests\\": "tests/"
+    }
+  },
   "suggest": {
     "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
     "ext-memcached": "Required to use the memcache cache driver.",
