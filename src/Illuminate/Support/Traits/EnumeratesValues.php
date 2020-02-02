@@ -708,7 +708,8 @@ trait EnumeratesValues
      * @param int $options
      * @return string
      */
-    public function toJson($options = 0) {
+    public function toJson($options = 0)
+    {
         return json_encode($this->jsonSerialize(), $options);
     }
 
@@ -840,15 +841,23 @@ trait EnumeratesValues
             switch ($operator) {
                 default:
                 case '=':
-                case '==': return $retrieved == $value;
+                case '==':
+                    return $retrieved == $value;
                 case '!=':
-                case '<>': return $retrieved != $value;
-                case '<': return $retrieved < $value;
-                case '>': return $retrieved > $value;
-                case '<=': return $retrieved <= $value;
-                case '>=': return $retrieved >= $value;
-                case '===': return $retrieved === $value;
-                case '!==': return $retrieved !== $value;
+                case '<>':
+                    return $retrieved != $value;
+                case '<':
+                    return $retrieved < $value;
+                case '>':
+                    return $retrieved > $value;
+                case '<=':
+                    return $retrieved <= $value;
+                case '>=':
+                    return $retrieved >= $value;
+                case '===':
+                    return $retrieved === $value;
+                case '!==':
+                    return $retrieved !== $value;
             }
         };
     }
