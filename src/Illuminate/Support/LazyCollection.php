@@ -589,7 +589,7 @@ class LazyCollection implements Enumerable
             }
         }
 
-        return $needle === $placeholder ? value ($default) : $needle;
+        return $needle === $placeholder ? value($default) : $needle;
     }
 
     /**
@@ -893,7 +893,7 @@ class LazyCollection implements Enumerable
     {
         $predicate = $this->useAsCallable($value) ? $value :
             function ($item) use ($value, $strict) {
-            return $strict ? $item === $value : $item == $value;
+                return $strict ? $item === $value : $item == $value;
             };
 
         foreach ($this as $key => $item) {
