@@ -2,9 +2,7 @@
 
 echo "updating autoloading..."
 composer update
-echo "[step: 1/3] format checking..."
+echo "[step: 1/2] format checking..."
 vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR2 -q src/ tests/
-echo "[step: 2/3] static debugging..."
-vendor/bin/phpstan analyse --level 1 src/ tests/
-echo "[step: 3/3] running tests..."
+echo "[step: 1/2] running tests..."
 vendor/bin/phpunit tests/
