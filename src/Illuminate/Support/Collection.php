@@ -926,7 +926,7 @@ class Collection implements ArrayAccess, Enumerable
      */
     public function search($value, $strict = false)
     {
-        if (!$this->userAsCallback($value)) {
+        if (!$this->useAsCallable($value)) {
             return array_search($value, $this->items, $strict);
         }
 

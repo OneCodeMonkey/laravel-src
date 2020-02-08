@@ -110,7 +110,7 @@ class LazyCollection implements Enumerable
      */
     public function remember()
     {
-        $iterator = $this->geIterator();
+        $iterator = $this->getIterator();
 
         $iteratorIndex = 0;
 
