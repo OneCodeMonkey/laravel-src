@@ -257,7 +257,7 @@ class Collection implements ArrayAccess, Enumerable
      * @param callable $callback
      * @return static
      */
-    public function diffKeyUsing($items, callable $callback)
+    public function diffKeysUsing($items, callable $callback)
     {
         return new static(array_diff_ukey($this->items, $this->getArrayableItems($items), $callback));
     }
