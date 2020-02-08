@@ -39,5 +39,4 @@ install:
 
 script:
   - vendor/bin/phpcs --standard=PSR2 -q src/ tests/
-  - vendor/bin/phpstan analyse --level 1 src/ tests/
   - vendor/bin/phpunit tests/
