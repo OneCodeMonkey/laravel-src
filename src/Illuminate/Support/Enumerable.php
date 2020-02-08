@@ -182,7 +182,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
      * @param callable $callback
      * @return static
      */
-    public function diffKeyUsing($items, callable $callback);
+    public function diffKeysUsing($items, callable $callback);
 
     /**
      * Retrieve duplicate items.

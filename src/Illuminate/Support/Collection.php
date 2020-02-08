@@ -185,8 +185,8 @@ class Collection implements ArrayAccess, Enumerable
     public function crossJoin(...$lists)
     {
         return new static(Arr::crossJoin(
-            $this->items, ...array_map([$this,
-                'getArrayableItems'], $lists)
+            $this->items,
+            ...array_map([$this,'getArrayableItems'], $lists)
         ));
     }
 
