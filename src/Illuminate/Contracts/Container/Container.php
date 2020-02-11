@@ -11,7 +11,7 @@ interface Container extends ContainerInterface
      * Determine if the given abstract type has been bound.
      *
      * @param string $abstract
-     * @return void
+     * @return bool
      */
     public function bound($abstract);
 
