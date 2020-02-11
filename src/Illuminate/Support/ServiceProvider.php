@@ -61,7 +61,8 @@ abstract class ServiceProvider
     {
         if (!$this->app->configurationIsCached()) {
             $this->app['config']->set($key, array_merge(
-                require $path, $this->app['config']->get($key, [])
+                require $path,
+                $this->app['config']->get($key, [])
             ));
         }
     }
@@ -91,7 +92,7 @@ abstract class ServiceProvider
         $this->callAfterResolving('view', function ($view) use ($path, $namespace) {
             if (isset($this->app->config['view']['paths']) &&
                 is_array($this->app->config['view']['paths'])) {
-                foreach($this->app->config['view']['paths'] as $viewPath) {
+                foreach ($this->app->config['view']['paths'] as $viewPath) {
                     if (is_dir($appPath = $viewPath.'/vendor/'.$namespace)) {
                         $view->addNamespace($namespace, $appPath);
                     }
