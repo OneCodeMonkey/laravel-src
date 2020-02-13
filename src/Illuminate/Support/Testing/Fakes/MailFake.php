@@ -153,7 +153,8 @@ class MailFake implements Mailer, MailQueue
             return get_class($mailable);
         })->join(', ');
 
-        PHPUnit::assertEmpty($this->queuedMailables, "The following mailables were queued unexpectedly: ".$mailableNames);
+        PHPUnit::assertEmpty($this->queuedMailables, "The following mailables were queued unexpectedly: ".
+            $mailableNames);
     }
 
     /**

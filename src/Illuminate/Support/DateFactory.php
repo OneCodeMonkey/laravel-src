@@ -128,7 +128,8 @@ class DateFactory
             return static::useFactory($handler);
         }
 
-        throw new InvalidArgumentException('Invalid date creation handler. Please provide a class name, callable, or Carbon factory.');
+        throw new InvalidArgumentException('Invalid date creation handler. Please provide a class name, callable, or 
+        Carbon factory.');
     }
 
     /**
