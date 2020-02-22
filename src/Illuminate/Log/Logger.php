@@ -261,7 +261,7 @@ class Logger implements LoggerInterface
     }
 
     /**
-     * Dynamically proxy method calls to the underlying logger.
+     * Dynamically proxy method calls to the underlying(隐藏的，潜在的) logger.
      *
      * @param string $method
      * @param array $parameters
