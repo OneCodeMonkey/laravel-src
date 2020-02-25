@@ -2,5 +2,8 @@
 
 已完成：
 
+|__ Auth/<br/>
+|__ Config/<br/>
 |__ Log/<br/>
-|__ Support/
+|__ Support/<br/>
+|__ Translation/
