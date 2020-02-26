@@ -77,7 +77,7 @@ interface Container extends ContainerInterface
      * @param \Closure|string|null $concrete
      * @return void
      */
-    public function singleTonIf($abstract, $concrete = null);
+    public function singletonIf($abstract, $concrete = null);
 
     /**
      * "Extend" an abstract type in the container.
