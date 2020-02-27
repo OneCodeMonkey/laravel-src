@@ -83,7 +83,7 @@ interface Container extends ContainerInterface
      * "Extend" an abstract type in the container.
      *
      * @param string $abstract
-     * @param Closure $closure
+     * @param \Closure $closure
      * @return void
      * @throws \InvalidArgumentException
      */
