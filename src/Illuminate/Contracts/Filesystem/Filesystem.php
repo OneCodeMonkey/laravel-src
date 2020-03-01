@@ -167,7 +167,7 @@ interface Filesystem
      * @param bool $recursive
      * @return array
      */
-    public function directories($directory = null, $recursive = null);
+    public function directories($directory = null, $recursive = false);
 
     /**
      * Get all(recursive) of the directories within a given directory.
