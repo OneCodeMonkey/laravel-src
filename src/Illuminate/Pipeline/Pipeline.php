@@ -98,7 +98,11 @@ class Pipeline implements PipelineContract
      */
     public function then(Closure $destination)
     {
-        $pipeline = array_reduce(array_reverse($this->pipes()), $this->carry(), $this->prepareDestination($destination));
+        $pipeline = array_reduce(
+            array_reverse($this->pipes()),
+            $this->carry(),
+            $this->prepareDestination($destination)
+        );
 
         return $pipeline($this->passable);
     }
@@ -163,7 +167,8 @@ class Pipeline implements PipelineContract
                         $parameters = [$passable, $stack];
                     }
 
-                    $carry = method_exists($pipe, $this->method) ? $pipe->{$this->method}(...$parameters) : $pipe(...$parameters);
+                    $carry = method_exists($pipe, $this->method) ? $pipe->{$this->method}(...$parameters) :
+                        $pipe(...$parameters);
 
                     return $this->handleCarry($carry);
                 } catch (Exception $e) {

@@ -11,7 +11,8 @@ use Illuminate\Support\Collection;
 use IteratorAggregate;
 use JsonSerializable;
 
-class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Countable, IteratorAggregate, Jsonable, JsonSerializable, PaginatorContract
+class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Countable, IteratorAggregate, Jsonable,
+    JsonSerializable, PaginatorContract
 {
     /**
      * Determine if there are more items in the data source.

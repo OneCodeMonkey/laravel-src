@@ -117,7 +117,7 @@ class LogManager implements LoggerInterface
         try {
             return $this->channels[$name] ?? with($this->resolve($name), function ($logger) use ($name) {
                 return $this->channels[$name] = $this->tap($name, new Logger($logger, $this->app['events']));
-                });
+            });
         } catch (Throwable $e) {
             return tap($this->createEmergencyLogger(), function ($logger) use ($e) {
                 $logger->emergency('Unable to create configured logger. Using emergency logger.', [
@@ -340,7 +340,8 @@ class LogManager implements LoggerInterface
     {
         return new Monolog($this->parseChannel($config), [
             $this->prepareHandler(new ErrorLogHandler(
-                $config['type'] ?? ErrorLogHandler::OPERATING_SYSTEM, $this->level($config)
+                $config['type'] ?? ErrorLogHandler::OPERATING_SYSTEM,
+                $this->level($config)
             )),
         ]);
     }
@@ -368,7 +369,8 @@ class LogManager implements LoggerInterface
         );
 
         return new Monolog($this->parseChannel($config), [$this->prepareHandler(
-            $this->app->make($config['handler'], $with), $config
+            $this->app->make($config['handler'], $with),
+            $config
         )]);
     }
 

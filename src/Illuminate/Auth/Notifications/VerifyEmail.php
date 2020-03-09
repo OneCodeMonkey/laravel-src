@@ -16,7 +16,7 @@ class VerifyEmail extends Notification
      *
      * @var \Closure|null
      */
-    static public $toMailCallback;
+    public static $toMailCallback;
 
     /**
      * Get the notification's channels.
@@ -74,7 +74,7 @@ class VerifyEmail extends Notification
      * @param \Closure $callback
      * @return void
      */
-    static public function toMailUsing($callback)
+    public static function toMailUsing($callback)
     {
         static::$toMailCallback = $callback;
     }

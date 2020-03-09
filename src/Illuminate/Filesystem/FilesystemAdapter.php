@@ -223,7 +223,8 @@ class FilesystemAdapter implements CloudFilesystemContract
             return $this->driver->putStream($path, $contents->detach(), $options);
         }
 
-        return is_resource($contents) ? $this->driver->putStream($path, $contents, $options) : $this->driver->put($path, $contents, $options);
+        return is_resource($contents) ? $this->driver->putStream($path, $contents, $options) :
+            $this->driver->put($path, $contents, $options);
     }
 
     /**
@@ -696,7 +697,7 @@ class FilesystemAdapter implements CloudFilesystemContract
             return;
         }
 
-        switch($visibility) {
+        switch ($visibility) {
             case FilesystemContract::VISIBILITY_PUBLIC:
                 return AdapterInterface::VISIBILITY_PUBLIC;
             case FilesystemContract::VISIBILITY_PRIVATE:

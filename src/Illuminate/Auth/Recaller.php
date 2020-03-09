@@ -51,7 +51,7 @@ class Recaller
      */
     public function hash()
     {
-        return explode('|', $this->recaller,3)[2];
+        return explode('|', $this->recaller, 3)[2];
     }
 
     /**

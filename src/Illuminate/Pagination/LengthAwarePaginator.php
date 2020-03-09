@@ -11,7 +11,8 @@ use Illuminate\Support\Collection;
 use IteratorAggregate;
 use JsonSerializable;
 
-class LengthAwarePaginator extends AbstractPaginator implements Arrayable, ArrayAccess, Countable, IteratorAggregate, Jsonable, JsonSerializable, LengthAwarePaginatorContract
+class LengthAwarePaginator extends AbstractPaginator implements
+    Arrayable, ArrayAccess, Countable, IteratorAggregate, Jsonable, JsonSerializable, LengthAwarePaginatorContract
 {
     /**
      * The total number of items before slicing.

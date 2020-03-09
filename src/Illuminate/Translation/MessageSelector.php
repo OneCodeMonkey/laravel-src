@@ -351,7 +351,8 @@ class MessageSelector
             case 'sr_RS':
             case 'uk':
             case 'uk_UA':
-                return (($number % 10 == 1) && ($number % 100 != 11)) ? 0 : ((($number % 10 >= 2) && ($number % 10 <= 4) && (($number % 100 < 10) || ($number % 100 >= 20))) ? 1 : 2);
+                return (($number % 10 == 1) && ($number % 100 != 11)) ? 0 : ((($number % 10 >= 2) &&
+                    ($number % 10 <= 4) && (($number % 100 < 10) || ($number % 100 >= 20))) ? 1 : 2);
             case 'cs':
             case 'cs_CZ':
             case 'sk':
@@ -362,22 +363,26 @@ class MessageSelector
                 return ($number == 1) ? 0 : (($number == 2) ? 1 : 2);
             case 'lt':
             case 'lt_LT':
-                return (($number % 10 == 1) && ($number % 100 != 11)) ? 0 : ((($number % 10 >= 2) && (($number % 100 < 10) || ($number % 100 >= 20))) ? 1 : 2);
+                return (($number % 10 == 1) && ($number % 100 != 11)) ? 0 : ((($number % 10 >= 2) &&
+                    (($number % 100 < 10) || ($number % 100 >= 20))) ? 1 : 2);
             case 'sl':
             case 'sl_SI':
-                return ($number % 100 == 1) ? 0 : (($number % 100 == 2) ? 1 : ((($number % 100 == 3) || ($number % 100 == 4)) ? 2 : 3));
+                return ($number % 100 == 1) ? 0 : (($number % 100 == 2) ? 1 : ((($number % 100 == 3) ||
+                    ($number % 100 == 4)) ? 2 : 3));
             case 'mk':
             case 'mk_MK':
                 return ($number % 10 == 1) ? 0 : 1;
             case 'mt':
             case 'mt_MT':
-                return ($number == 1) ? 0 : ((($number == 0) || (($number % 100 > 1) && ($number % 100 < 11))) ? 1 : ((($number % 100 > 10) && ($number % 100 < 20)) ? 2 : 3));
+                return ($number == 1) ? 0 : ((($number == 0) || (($number % 100 > 1) && ($number % 100 < 11))) ? 1 :
+                    ((($number % 100 > 10) && ($number % 100 < 20)) ? 2 : 3));
             case 'lv':
             case 'lv_LV':
                 return ($number == 0) ? 0 : ((($number % 10 == 1) && ($number % 100 != 11)) ? 1 : 2);
             case 'pl':
             case 'pl_PL':
-                return ($number == 1) ? 0 : ((($number % 10 >= 2) && ($number % 10 <= 4) && (($number % 100 < 12) || ($number % 100 > 14))) ? 1 : 2);
+                return ($number == 1) ? 0 : ((($number % 10 >= 2) && ($number % 10 <= 4) && (($number % 100 < 12) ||
+                        ($number % 100 > 14))) ? 1 : 2);
             case 'cy':
             case 'cy_GB':
                 return ($number == 1) ? 0 : (($number == 2) ? 1 : ((($number == 8) || ($number == 11)) ? 2 : 3));
@@ -404,7 +409,8 @@ class MessageSelector
             case 'ar_SY':
             case 'ar_TN':
             case 'ar_YE':
-                return ($number == 0) ? 0 : (($number == 1) ? 1 : (($number == 2) ? 2 : ((($number % 100 >= 3) && ($number % 100 <= 10)) ? 3 : ((($number % 100 >= 11) && ($number % 100 <= 99)) ? 4 : 5))));
+                return ($number == 0) ? 0 : (($number == 1) ? 1 : (($number == 2) ? 2 : ((($number % 100 >= 3) &&
+                    ($number % 100 <= 10)) ? 3 : ((($number % 100 >= 11) && ($number % 100 <= 99)) ? 4 : 5))));
             default:
                 return 0;
         }

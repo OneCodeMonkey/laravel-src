@@ -432,7 +432,8 @@ class Filesystem
      */
     public function allFiles($directory, $hidden = false)
     {
-        return iterator_to_array(Finder::create()->files()->ignoreDotFiles(!$hidden)->in($directory)->sortByName(), false);
+        return iterator_to_array(Finder::create()->files()->ignoreDotFiles(!$hidden)->in($directory)->sortByName(),
+        false);
     }
 
     /**
@@ -524,7 +525,6 @@ class Filesystem
                     return false;
                 }
             }
-
             // If the current items is just a regular file, we will just copy this to the new location and keep
             // looping. If for some reason the copy fails we'll bail out and return false, so the developer is aware
             // that the copy process failed.
@@ -561,7 +561,6 @@ class Filesystem
             if ($item->isDir() && !$item->isLink()) {
                 $this->deleteDirectory($item->getPathname());
             }
-
             // If the item is just a file, we can go ahead and delete it since we're just looping through and waxing
             // all of the files in this directory and calling directories recursively, so we delete the real path.
             else {

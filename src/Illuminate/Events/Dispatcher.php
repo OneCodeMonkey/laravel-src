@@ -193,7 +193,9 @@ class Dispatcher implements DispatcherContract
         foreach ($this->getListeners($event) as $listener) {
             $response = $listener($event, $payload);
 
-            // If a response is returned from the listener and event halting is enabled we will just return this response, and not call the rest of the event listeners. Otherwise we will add the response on the response list.
+            // If a response is returned from the listener and event halting is enabled we will just return this
+            // response, and not call the rest of the event listeners. Otherwise we will add the response on the
+            // response list.
             if ($halt && !is_null($response)) {
                 return $response;
             }
@@ -454,7 +456,8 @@ class Dispatcher implements DispatcherContract
 
         $queue = $listener->queue ?? null;
 
-        isset($listener->delay) ? $connection->laterOn($queue, $listener->delay, $job) : $connection->pushOn($queue, $job);
+        isset($listener->delay) ? $connection->laterOn($queue, $listener->delay, $job) :
+            $connection->pushOn($queue, $job);
     }
 
     /**

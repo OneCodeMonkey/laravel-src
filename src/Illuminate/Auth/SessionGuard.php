@@ -334,7 +334,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
 
     /**
      * Attempt to authenticate a user using the given credentials.
-     * 
+     *
      * @param array $credentials
      * @param bool $remember
      * @return bool
@@ -533,7 +533,8 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
 
         $this->clearUserDataFromStorage();
 
-        // If we have an event dispatcher instance, we can fire off the logout event so any further processing can be done. This allows the developer to be listening for anytime a user signs out of this application manually.
+        // If we have an event dispatcher instance, we can fire off the logout event so any further processing can be
+        // done. This allows the developer to be listening for anytime a user signs out of this application manually.
         if (isset($this->events)) {
             $this->events->dispatch(new CurrentDeviceLogout($this->name, $user));
         }

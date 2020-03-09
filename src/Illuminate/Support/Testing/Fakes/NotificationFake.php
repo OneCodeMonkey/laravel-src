@@ -216,7 +216,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
                     if ($notifiable instanceof HasLocalePreference) {
                         return $notifiable->preferredLocale();
                     }
-                    }),
+                }),
             ];
         }
     }

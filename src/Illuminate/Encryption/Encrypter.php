@@ -39,7 +39,8 @@ class Encrypter implements EncrypterContract
             $this->key = $key;
             $this->cipher = $cipher;
         } else {
-            throw new RuntimeException('The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.');
+            throw new RuntimeException('The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct 
+            key lengths.');
         }
     }
 
@@ -50,7 +51,7 @@ class Encrypter implements EncrypterContract
      * @param string $cipher
      * @return bool
      */
-    static public function supported($key, $cipher)
+    public static function supported($key, $cipher)
     {
         $length = mb_strlen($key, '8bit');
 
@@ -69,7 +70,8 @@ class Encrypter implements EncrypterContract
     {
         $iv = random_bytes(openssl_cipher_iv_length($this->cipher));
 
-        // First we will encrypt the value using OpenSSL. After this is encrypted we will proceed to calculating a MAC for the encrypted value so that this value can be verified later as not having been changed by the users.
+        // First we will encrypt the value using OpenSSL. After this is encrypted we will proceed to calculating a MAC
+        // for the encrypted value so that this value can be verified later as not having been changed by the users.
         $value = \openssl_encrypt($serialize ? serialize($value) : $value, $this->cipher, $this->key, 0, $iv);
 
         if ($value === false) {
@@ -184,7 +186,8 @@ class Encrypter implements EncrypterContract
      */
     protected function validPayload($payload)
     {
-        return is_array($payload) && isset($payload['iv'], $payload['value'], $payload['mac']) && strlen(base64_decode($payload['iv'], true)) === openssl_cipher_iv_length($this->cipher);
+        return is_array($payload) && isset($payload['iv'], $payload['value'], $payload['mac']) &&
+            strlen(base64_decode($payload['iv'], true)) === openssl_cipher_iv_length($this->cipher);
     }
 
     /**

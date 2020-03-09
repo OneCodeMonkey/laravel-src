@@ -20,7 +20,7 @@ class ResetPassword extends Notification
      *
      * @var \Closure|null
      */
-    static public $toMailCallback;
+    public static $toMailCallback;
 
     /**
      * Create a notification instance.

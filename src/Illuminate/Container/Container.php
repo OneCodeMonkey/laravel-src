@@ -192,7 +192,8 @@ class Container implements ArrayAccess, ContainerContract
      */
     public function isShared($abstract)
     {
-        return isset($this->instances[$abstract]) || (isset($this->bindings[$abstract]['shared']) && $this->bindings[$abstract]['shared'] === true);
+        return isset($this->instances[$abstract]) || (isset($this->bindings[$abstract]['shared']) &&
+                $this->bindings[$abstract]['shared'] === true);
     }
 
     /**
@@ -707,7 +708,9 @@ class Container implements ArrayAccess, ContainerContract
             return $concrete;
         }
 
-        // If we dont't have a registered resolver or concrete for the type, we'll just assume each type is a concrete name and will attempt to resolve it as is since the container should be able to resolve concretes automatically.
+        // If we dont't have a registered resolver or concrete for the type, we'll just assume each type is a concrete
+        // name and will attempt to resolve it as is since the container should be able to resolve concretes
+        // automatically.
         if (isset($this->bindings[$abstract])) {
             return $this->bindings[$abstract]['concrete'];
         }
@@ -726,7 +729,6 @@ class Container implements ArrayAccess, ContainerContract
         if (!is_null($binding = $this->findInContextualBindings($abstract))) {
             return $binding;
         }
-
         // Next we need to see if a contextual binding might be bound under an alias of the given abstract type. So, we will need to check if any aliases exist with this type and then spin through them and check for contextual bindings on these.
         if (empty($this->abstractAliases[$abstract])) {
             return;
@@ -841,7 +843,8 @@ class Container implements ArrayAccess, ContainerContract
 
             // If the class is null, it means the dependency is a string or some other primitive type which we can not
             // resolve since it is not a class and we will just bomb out with an error since we have no-where to go.
-            $results[] = is_null($dependency->getClass()) ? $this->resolvePrimitive($dependency) : $this->resolveClass($dependency);
+            $results[] = is_null($dependency->getClass()) ? $this->resolvePrimitive($dependency) :
+                $this->resolveClass($dependency);
         }
 
         return $results;
@@ -911,7 +914,6 @@ class Container implements ArrayAccess, ContainerContract
         try {
             return $this->make($parameter->getClass()->name);
         }
-
         // If we can not resolve the class instance, we will check to see if the value is optional, and if it is we
         // will return the optional parameter value as the value of the dependency, similarly to how we do this with
         // scalars.
@@ -953,7 +955,8 @@ class Container implements ArrayAccess, ContainerContract
      */
     protected function unresolvablePrimitive(ReflectionParameter $parameter)
     {
-        $message = "Unresolvable dependency resolving {$parameter} in class {$parameter->getDeclaringClass()->getName()}";
+        $message = "Unresolvable dependency resolving {$parameter} in class {$parameter->getDeclaringClass()
+        ->getName()}";
 
         throw new BindingResolutionException($message);
     }

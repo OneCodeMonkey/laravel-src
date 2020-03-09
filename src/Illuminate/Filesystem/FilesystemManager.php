@@ -160,8 +160,15 @@ class FilesystemManager implements FactoryContract
 
         $links = ($config['links'] ?? null) === 'skip' ? LocalAdapter::SKIP_LINKS : LocalAdapter::DISALLOW_LINKS;
 
-        return $this->adapt($this->createFlysystem(new LocalAdapter($config['root'], $config['lock'] ?? LOCK_EX,
-            $links, $permissions), $config));
+        return $this->adapt($this->createFlysystem(
+            new LocalAdapter(
+                $config['root'],
+                $config['lock'] ?? LOCK_EX,
+                $links,
+                $permissions
+            ),
+            $config
+        ));
     }
 
     /**
@@ -200,7 +207,12 @@ class FilesystemManager implements FactoryContract
 
         $options = $config['options'] ?? [];
 
-        return $this->adapt($this->createFlysystem(new S3Adapter(new S3Client($s3Config), $s3Config['bucket'], $root, $options), $config));
+        return $this->adapt($this->createFlysystem(new S3Adapter(
+            new S3Client($s3Config),
+            $s3Config['bucket'],
+            $root,
+            $options
+        ), $config));
     }
 
     /**
