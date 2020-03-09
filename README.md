@@ -13,6 +13,7 @@
 |__ ***Foundation/<br/>
 |__ Log/<br/>
 |__ Mail/<br/>
+|__ *Pipeline/<br/>
 |__ **Queue/<br/>
 |__ **Redis/<br/>
 |__ *Routing/<br/>
