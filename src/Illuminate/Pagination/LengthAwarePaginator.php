@@ -72,7 +72,7 @@ class LengthAwarePaginator extends AbstractPaginator implements Arrayable, Array
      *
      * @param string|null $view
      * @param array $data
-     * @return \Illuminate\Contracts\Support\Htmlable
+     * @return \Illuminate\Contracts\View\View|string
      */
     public function links($view = null, $data = [])
     {
