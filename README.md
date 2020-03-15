@@ -24,7 +24,7 @@
 |__ Pipeline/<br/>
 |__ **Queue/<br/>
 |__ **Redis/<br/>
-|__ *Routing/<br/>
+|__ Routing/<br/>
 |__ ****Session/<br/>
 |__ ~Support/<br/>
 |__ Translation/<br/>
