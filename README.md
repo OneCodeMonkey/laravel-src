@@ -8,6 +8,7 @@
 |__ ***Cache/<br/>
 |__ Config/<br/>
 |__ Container/<br/>
+|__ Console/<br/>
 |__ ~Contracts/<br/>
 |__ Cookie/<br/>
 |__ Config/<br/>
