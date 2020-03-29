@@ -18,7 +18,7 @@
 |__ Filesystem/<br/>
 |__ ~Foundation/<br/>
 |__ Hashing/<br/>
-|__ **Http/<br/>
+|__ Http/<br/>
 |__ Log/<br/>
 |__ Mail/<br/>
 |__ *Notifications/<br/>
