@@ -24,7 +24,7 @@
 |__ *Notifications/<br/>
 |__ Pagination/<br/>
 |__ Pipeline/<br/>
-|__ **Queue/<br/>
+|__ Queue/<br/>
 |__ Redis/<br/>
 |__ Routing/<br/>
 |__ **Session/<br/>
