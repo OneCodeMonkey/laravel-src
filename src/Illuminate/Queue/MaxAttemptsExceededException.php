@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Queue;
+namespace Illuminate\Queue;
 
 use RuntimeException;
 
