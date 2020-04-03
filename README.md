@@ -27,7 +27,7 @@
 |__ Queue/<br/>
 |__ Redis/<br/>
 |__ Routing/<br/>
-|__ **Session/<br/>
+|__ Session/<br/>
 |__ ~Support/<br/>
 |__ Translation/<br/>
 |__ ***Validation/<br/>
