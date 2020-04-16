@@ -5,7 +5,7 @@
 |__ Auth/<br/>
 |__ Broadcasting/<br/>
 |__ Bus/<br/>
-|__ ***Cache/<br/>
+|__ Cache/<br/>
 |__ Config/<br/>
 |__ Container/<br/>
 |__ Console/<br/>
@@ -30,5 +30,5 @@
 |__ Session/<br/>
 |__ ~Support/<br/>
 |__ Translation/<br/>
-|__ ***Validation/<br/>
-|__ **View/<br>
+|__ *Validation/<br/>
+|__ *View/<br>
