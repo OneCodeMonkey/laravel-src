@@ -21,7 +21,7 @@
 |__ Http/<br/>
 |__ Log/<br/>
 |__ Mail/<br/>
-|__ *Notifications/<br/>
+|__ Notifications/<br/>
 |__ Pagination/<br/>
 |__ Pipeline/<br/>
 |__ Queue/<br/>
