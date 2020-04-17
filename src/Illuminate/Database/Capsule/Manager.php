@@ -5,7 +5,7 @@ namespace Illuminate\Database\Capsule;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Connectors\ConnectionFactory;
-use Illumiante\Database\DatabaseManager;
+use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Traits\CapsuleManagerTrait;
 use PDO;

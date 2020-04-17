@@ -5,7 +5,7 @@ namespace Illuminate\Notifications\Channels;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Notifications\Events\BroadcastNotificationCreated;
 use Illuminate\Notifications\Messages\BroadcastMessage;
-use Illumiante\Notifications\Notification;
+use Illuminate\Notifications\Notification;
 use RuntimeException;
 
 class BroadcastChannel
