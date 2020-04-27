@@ -31,4 +31,4 @@
 |__ ~Support/<br/>
 |__ Translation/<br/>
 |__ *Validation/<br/>
-|__ *View/<br>
+|__ View/<br>
