@@ -28,7 +28,7 @@
 |__ Redis/<br/>
 |__ Routing/<br/>
 |__ Session/<br/>
-|__ ~Support/<br/>
+|__ Support/<br/>
 |__ Translation/<br/>
 |__ *Validation/<br/>
 |__ View/<br>
