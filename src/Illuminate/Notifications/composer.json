@@ -1,0 +1,23 @@
+{
+  "name": "illuminate/notifications",
+  "require": {
+    "php": "^7.2",
+    "illuminate/broadcasting": "^6.0",
+    "illuminate/bus": "^6.0",
+    "illuminate/container": "^6.0",
+    "illuminate/contracts": "^6.0",
+    "illuminate/filesystem": "^6.0",
+    "illuminate/mail": "^6.0",
+    "illuminate/queue": "^6.0",
+    "illuminate/support": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Illuminate\\Notifications\\": ""
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev"
+}
