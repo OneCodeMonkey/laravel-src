@@ -30,5 +30,5 @@
 |__ Session/<br/>
 |__ Support/<br/>
 |__ Translation/<br/>
-|__ *Validation/<br/>
+|__ Validation/<br/>
 |__ View/<br>
