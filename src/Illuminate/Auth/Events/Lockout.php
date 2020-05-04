@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Auth\Access;
+namespace Illuminate\Auth\Events;
 
 use Illuminate\Http\Request;
 
