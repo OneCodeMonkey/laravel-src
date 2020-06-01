@@ -1,6 +1,6 @@
 <?php
 
-namespace Illumiante\Foundation\Console;
+namespace Illuminate\Foundation\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
