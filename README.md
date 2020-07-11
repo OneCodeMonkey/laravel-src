@@ -16,7 +16,7 @@
 |__ Encryption/<br/>
 |__ Events/<br/>
 |__ Filesystem/<br/>
-|__ ~Foundation/<br/>
+|__ Foundation/<br/>
 |__ Hashing/<br/>
 |__ Http/<br/>
 |__ Log/<br/>
