@@ -1,6 +1,16 @@
 [![Build Status](https://www.travis-ci.org/OneCodeMonkey/laravel-src.svg?branch=master)](https://www.travis-ci.org/OneCodeMonkey/laravel-src)
 
-已完成：
+源码解读:
+
+| Item                 | Status |
+| -------------------- | ------ |
+| 框架生命周期（详细） |        |
+| 路由件               |        |
+|                      |        |
+|                      |        |
+
+
+已完成:
 
 |__ Auth/<br/>
 |__ Broadcasting/<br/>
@@ -12,7 +22,7 @@
 |__ Contracts/<br/>
 |__ Cookie/<br/>
 |__ Config/<br/>
-|__ **Database/<br/>
+|__ Database/<br/>
 |__ Encryption/<br/>
 |__ Events/<br/>
 |__ Filesystem/<br/>
